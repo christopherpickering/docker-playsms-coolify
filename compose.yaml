@@ -9,8 +9,6 @@ services:
       TZ: ${PLAYSMS_CONTAINER_TIMEZONE:-America/Chicago}
     volumes:
       - mysql-data:/var/lib/mysql
-    networks:
-      - playsms-network
     healthcheck:
       test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
       start_period: 8s
