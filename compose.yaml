@@ -21,8 +21,8 @@ services:
   playsms:
     image: ${DOCKER_IMAGE_PLAYSMS:-playsms/playsms:1.4.x}
     environment: &playsms_vars
-      GID: ${GID}
-      UID: ${UID}
+      GID: ${GID:-1000}
+      UID: ${UID:-1000}
       TZ: ${PLAYSMS_CONTAINER_TIMEZONE:-America/Chicago}
       PLAYSMS_VERSION: ${PLAYSMS_VERSION}
       PLAYSMS_DB_NAME: ${PLAYSMS_DB_NAME:-mariadb}
