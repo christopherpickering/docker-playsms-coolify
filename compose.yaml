@@ -56,7 +56,7 @@ services:
       SERVICE_FQDN_NGINX_80: ${SERVICE_FQDN_NGINX_80}
       TZ: ${PLAYSMS_CONTAINER_TIMEZONE:-America/Chicago}
     volumes:
-      - ./nginx/templates:/etc/nginx/templates
+      - nginx-templates:/etc/nginx/templates
       - playsms-web:/var/www/html
     depends_on:
       mariadb:
