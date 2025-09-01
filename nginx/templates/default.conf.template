@@ -1,15 +1,7 @@
 server {
     listen 80;
-    server_name ${WEBSERVER_SERVER_NAME};
-    
-    # Redirect all HTTP traffic to HTTPS
-    return 301 https://$host$request_uri;
-}
+    server_name _;
 
-server {
-    listen 443 ssl;
-    server_name ${WEBSERVER_SERVER_NAME};
-    
     ssl_certificate /etc/nginx/ssl/nginx.crt;
     ssl_certificate_key /etc/nginx/ssl/nginx.key;
     
