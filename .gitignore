@@ -2,3 +2,5 @@
 volumes/
 _vol/mysql/
 _vol/playsms/
+nginx/.DS_Store
+.DS_Store
