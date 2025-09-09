@@ -46,6 +46,7 @@ services:
     volumes:
       - playsms-log:/home/playsms/log
       - playsms-web:/home/playsms/web
+      - playsms-plugin:/var/www/html/plugin/gateway/generic
     depends_on:
       mariadb:
         condition: service_healthy
